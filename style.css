@@ -1,0 +1,161 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes stretchIn {
+  from {
+    font-size: 50pt;
+  }
+  to {
+    font-size: 42pt;
+  }
+}
+@keyframes buttonColor {
+  to {
+    color: #4286f4;
+  }
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16pt;
+  background: black;
+}
+h1 {
+  font-family: 'Caesar Dressing', cursive;
+  color: #4286f4;
+  font-size: 48pt;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  background: black;
+}
+.mainImage {
+  background: url('image04.jpg') no-repeat fixed top;
+  width: 100%;
+  height: 700px;
+  background-size: cover;
+  text-align: center;
+  box-shadow: 5px -26px 17px 31px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+}
+.mainImage .bigTitle,
+.mainImage .decorBorder {
+  font-size: 90pt;
+  animation-name: fadeIn;
+  animation-duration: 1.5s;
+}
+.mainImage .bigTitle {
+  margin: auto 0 0 0;
+}
+.mainImage .decorBorder {
+  border-bottom: 4px solid white;
+  width: 50%;
+  margin: 0;
+  left: 25%;
+}
+.mainImage .subTitle {
+  font-size: 42pt;
+  color: white;
+  margin: 0 0 auto 0;
+  animation-name: stretchIn;
+  animation-duration: 1.5s;
+}
+#indexIMG {
+  background-image: url('image04.jpg');
+}
+#about-usIMG {
+  background: url('image06.jpg') no-repeat fixed center -500px;
+  background-size: cover;
+  height: 600px;
+}
+#our-menuIMG {
+  background-image: url('image');
+}
+.navBar {
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+  position: fixed;
+  width: 100%;
+  font-size: 18px;
+  top: 0;
+}
+.navBar .headerImage {
+  height: 100px;
+  width: 100px;
+  background-image: url(../logo.png);
+  background-size: cover;
+}
+.navBar .navButtons {
+  margin-right: 4%;
+}
+.navBar .navButtons .barLink {
+  margin: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  padding: 5px 8px 5px 8px;
+  text-decoration: none;
+  color: white;
+}
+.navBar .navButtons .barLink:hover {
+  color: #4286f4;
+}
+.navBar .navButtons .barLink:active {
+  background-color: white;
+  color: gray;
+}
+.navBar .navButtons .active {
+  background-color: white;
+  color: rgba(0, 0, 0, 0.7);
+}
+.content {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  vertical-align: center;
+}
+.content .leftContent {
+  margin: 0 0 50px 50px;
+  text-align: center;
+}
+.rightContent {
+  text-align: center;
+  margin: 0 0 50px 50px;
+  vertical-align: center;
+}
+.fa-facebook,
+.fa-yelp {
+  font-size: 25pt;
+  margin: 10px;
+  color: black;
+}
+.fa-facebook:hover {
+  color: #4286f4;
+}
+.fa-yelp:hover {
+  color: #d30000;
+}
+.footer p {
+  background: black;
+  bottom: 0;
+  position: relative;
+  color: gray;
+  text-align: center;
+  font-size: 14pt;
+}

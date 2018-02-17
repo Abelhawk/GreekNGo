@@ -1,6 +1,7 @@
 // VARIABLES
 @lightBlue: #4286f4;
 @red: #d30000;
+@gray: #a8a8a8;
 
 // MIXINS
 @keyframes fadeIn {
@@ -20,14 +21,37 @@ html,body{
   margin: 0;
   padding: 0;
   font-family: 'Oswald', sans-serif;
+  font-weight: normal;
   font-size: 16pt;
   background: black;
+  width: 100%;
+  height: 100%;
 }
 h1 {
   font-family: 'Caesar Dressing', cursive;
   color: @lightBlue;
   font-size: 48pt;
   margin: 0;
+}
+h2 {
+  color: @lightBlue;
+  font-size: 24pt;
+  margin: 0 0 5px 0;
+}
+h3 {
+  color: @gray;
+  font-size: 12pt;
+  margin: 0;
+  font-weight: lighter;
+
+}
+p{
+  margin: 0;
+}
+
+.leftMenu p, .rightMenu p{
+  letter-spacing: 2px;
+  //padding: 0 5px 0 5px;
 }
 a {
   text-decoration: none;
@@ -44,7 +68,7 @@ a {
     height: 700px;
     background-size: cover;
     text-align: center;
-    box-shadow: 5px -26px 17px 31px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 10px 17px 0px rgba(0,0,0,0.75);
     display: flex;
     align-items: center;
     flex-flow: column;
@@ -73,18 +97,47 @@ a {
       animation-name: stretchIn;
       animation-duration: 1.5s;
     }
+    #menuSub1, #menuSub2{
+      margin: auto 0 auto 0;
+    }
   }
   #indexIMG{
     background-image: url('image04.jpg');
   }
   #about-usIMG{
-    background: url('image06.jpg') no-repeat fixed center -500px;
+    background: url('image06.jpg') no-repeat fixed center 75%;
     background-size: cover;
     height: 600px;
   }
-  #our-menuIMG{
-    background-image: url('image');
+  #our-menuIMG {
+    background: url('gyro.jpg') no-repeat fixed center 75%;
+    background-size: cover;
+    height: 500px;
   }
+#saladsIMG{
+  background: url('salad.jpg') no-repeat fixed center 75%;
+  background-size: cover;
+  height: 300px;
+  vertical-align: center;
+  }
+#sidesIMG{
+  background: url('baklava.jpg') no-repeat fixed center 75%;
+  background-size: cover;
+  height: 300px;
+  vertical-align: center;
+  }
+#cateringIMG{
+  background: url('image02.jpg') no-repeat fixed center 75%;
+  background-size: cover;
+  height: 600px;
+  vertical-align: center;
+}
+#contactIMG{
+  background: url('image03.jpg') no-repeat fixed center 75%;
+  background-size: cover;
+  height: 500px;
+  vertical-align: center;
+}
 //--------TOP NAVIGATION BAR-----
 
 .navBar{
@@ -132,48 +185,135 @@ a {
 
 //-------BOTTOM CONTENT------
 
-.content{
+.content {
   background-color: white;
   display: flex;
   justify-content: center;
-  //width: 100%;
-  padding: 50px;
-  vertical-align: center;
+  padding: 35px 25px 35px 25px;
+  //width: calc(100% - 50px);
+  }
 
-  .leftContent{
-    margin: 0 0 50px 50px;
+  .leftContent, .rightContent {
     text-align: center;
+    margin: 25px;
+  }
+  .leftMenu, .rightMenu{
+    text-align: right;
+    padding: 0 10px 0 20px;
+  }
+
+  .fa-facebook, .fa-yelp {
+    font-size: 25pt;
+    margin: 10px;
+    color: black;
+  }
+  .fa-facebook {
+    &:hover {
+      color: @lightBlue;
     }
   }
-  .rightContent{
-    text-align: center;
-    margin: 0 0 50px 50px;
-    vertical-align: center;
+  .fa-yelp {
+    &:hover {
+      color: @red;
+    }
   }
-.fa-facebook, .fa-yelp {
-  font-size: 25pt;
-  margin: 10px;
-  color: black;
-}
-.fa-facebook{
-  &:hover {
-    color: @lightBlue;
+  //-----UNIQUE--------
+  .menuTitle{
+    margin-bottom: 10px;
   }
+  //.listtt //----Doesn't work
+  //{
+  //  position: relative;
+  //  margin-top: 0;
+  //  margin-bottom: 0;
+  //  padding-right: 96px;
+  //  text-align: left;
+  //}
+  //span.dots{
+  //  position: absolute;
+  //  top: 17px;
+  //  left: 0;
+  //  right: 0;
+  //  z-index: 1;
+  //  margin: 0;
+  //  border: 0;
+  //  height: 3px;
+  //  display: block;
+  //  background-image: radial-gradient(circle closest-side, @gray 100%);
+  //  background-position: bottom;
+  //  background-size: 6px 3px;
+  //  background-repeat: repeat-x;
+  //}
+.form{
+  margin: 10px 0 0 0;
 }
-.fa-yelp{
-  &:hover {
-    color: @red;
+input[type="text"], [type="email"], [type="tel"]{
+  width: 200px;
+  height: 30px;
+  font-size: 14pt;
+  font-family: 'Oswald', sans-serif;
+  font-weight: lighter;
+  color: gray;
+  margin-bottom: 10px;
+}
+textarea{
+  width: 200px;
+  height: 200px;
+  font-size: 14pt;
+  font-family: 'Oswald', sans-serif;
+  color: gray;
+  margin-bottom: 20px;
+}
+.SUBMIT{
+  background: black;
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+  color: white;
+  font-size: 12pt;
+  font-family: 'Oswald', sans-serif;
+  &:hover{
+    background: @lightBlue;
   }
-}
 
+}
 
 //------FOOTER-----------
 
-.footer p{
-  background: black;
+.copyright{
   bottom: 0;
-  position: relative;
-  color: gray;
   text-align: center;
-  font-size: 14pt;
+  color: @gray;
+  margin: 0 auto 10px auto;
+  font-size: 12pt;
+}
+.footer {
+  background: black;
+  //border: white 5px solid;
+  display: flex;
+  justify-content: center;
+  margin: 25px;
+  color: white;
+  padding: 25px;
+
+  .footer h2{
+    color: white;
+  }
+  .footAddress, .hours{
+    padding: 0 25px 0 25px;
+    margin: 0 25px 0 25px;
+    //border: white 2px solid;
+  }
+}
+
+
+//-------MAKE TO FIT---------
+
+@media only screen and (max-width: 700px){
+  .content{
+    flex-flow: column;
+  }
+  .leftContent{
+    margin: 0 0 20px 0;
+  }
 }

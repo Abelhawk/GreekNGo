@@ -24,14 +24,35 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Oswald', sans-serif;
+  font-weight: normal;
   font-size: 16pt;
   background: black;
+  width: 100%;
+  height: 100%;
 }
 h1 {
   font-family: 'Caesar Dressing', cursive;
   color: #4286f4;
   font-size: 48pt;
   margin: 0;
+}
+h2 {
+  color: #4286f4;
+  font-size: 24pt;
+  margin: 0 0 5px 0;
+}
+h3 {
+  color: #a8a8a8;
+  font-size: 12pt;
+  margin: 0;
+  font-weight: lighter;
+}
+p {
+  margin: 0;
+}
+.leftMenu p,
+.rightMenu p {
+  letter-spacing: 2px;
 }
 a {
   text-decoration: none;
@@ -45,7 +66,7 @@ a {
   height: 700px;
   background-size: cover;
   text-align: center;
-  box-shadow: 5px -26px 17px 31px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 10px 17px 0px rgba(0, 0, 0, 0.75);
   display: flex;
   align-items: center;
   flex-flow: column;
@@ -72,16 +93,46 @@ a {
   animation-name: stretchIn;
   animation-duration: 1.5s;
 }
+.mainImage #menuSub1,
+.mainImage #menuSub2 {
+  margin: auto 0 auto 0;
+}
 #indexIMG {
   background-image: url('image04.jpg');
 }
 #about-usIMG {
-  background: url('image06.jpg') no-repeat fixed center -500px;
+  background: url('image06.jpg') no-repeat fixed center 75%;
   background-size: cover;
   height: 600px;
 }
 #our-menuIMG {
-  background-image: url('image');
+  background: url('gyro.jpg') no-repeat fixed center 75%;
+  background-size: cover;
+  height: 500px;
+}
+#saladsIMG {
+  background: url('salad.jpg') no-repeat fixed center 75%;
+  background-size: cover;
+  height: 300px;
+  vertical-align: center;
+}
+#sidesIMG {
+  background: url('baklava.jpg') no-repeat fixed center 75%;
+  background-size: cover;
+  height: 300px;
+  vertical-align: center;
+}
+#cateringIMG {
+  background: url('image02.jpg') no-repeat fixed center 75%;
+  background-size: cover;
+  height: 600px;
+  vertical-align: center;
+}
+#contactIMG {
+  background: url('image03.jpg') no-repeat fixed center 75%;
+  background-size: cover;
+  height: 500px;
+  vertical-align: center;
 }
 .navBar {
   background: rgba(0, 0, 0, 0.7);
@@ -127,17 +178,17 @@ a {
   background-color: white;
   display: flex;
   justify-content: center;
-  padding: 50px;
-  vertical-align: center;
+  padding: 35px 25px 35px 25px;
 }
-.content .leftContent {
-  margin: 0 0 50px 50px;
-  text-align: center;
-}
+.leftContent,
 .rightContent {
   text-align: center;
-  margin: 0 0 50px 50px;
-  vertical-align: center;
+  margin: 25px;
+}
+.leftMenu,
+.rightMenu {
+  text-align: right;
+  padding: 0 10px 0 20px;
 }
 .fa-facebook,
 .fa-yelp {
@@ -151,11 +202,71 @@ a {
 .fa-yelp:hover {
   color: #d30000;
 }
-.footer p {
-  background: black;
-  bottom: 0;
-  position: relative;
-  color: gray;
-  text-align: center;
+.menuTitle {
+  margin-bottom: 10px;
+}
+.form {
+  margin: 10px 0 0 0;
+}
+input[type="text"],
+[type="email"],
+[type="tel"] {
+  width: 200px;
+  height: 30px;
   font-size: 14pt;
+  font-family: 'Oswald', sans-serif;
+  font-weight: lighter;
+  color: gray;
+  margin-bottom: 10px;
+}
+textarea {
+  width: 200px;
+  height: 200px;
+  font-size: 14pt;
+  font-family: 'Oswald', sans-serif;
+  color: gray;
+  margin-bottom: 20px;
+}
+.SUBMIT {
+  background: black;
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+  color: white;
+  font-size: 12pt;
+  font-family: 'Oswald', sans-serif;
+}
+.SUBMIT:hover {
+  background: #4286f4;
+}
+.copyright {
+  bottom: 0;
+  text-align: center;
+  color: #a8a8a8;
+  margin: 0 auto 10px auto;
+  font-size: 12pt;
+}
+.footer {
+  background: black;
+  display: flex;
+  justify-content: center;
+  margin: 25px;
+  color: white;
+  padding: 25px;
+}
+.footer .footer h2 {
+  color: white;
+}
+.footer .footAddress,
+.footer .hours {
+  padding: 0 25px 0 25px;
+  margin: 0 25px 0 25px;
+}
+@media only screen and (max-width: 700px) {
+  .content {
+    flex-flow: column;
+  }
+  .leftContent {
+    margin: 0 0 20px 0;
+  }
 }

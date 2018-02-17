@@ -1,10 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Under construction!</title>
+    <html lang="en-US"></html>
+    <title>Contact Us - Greek N Go</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Caesar+Dressing|Oswald" rel="stylesheet">
 </head>
 <body>
-<img src="http://alexsolution.com/caution.gif">
+<div class="container">
+    <div class = navBar>
+        <a class="headerImage" href="index.html">
+        </a>
+        <div class="navButtons">
+            <a class="barLink" href="index.html">Home</a>
+            <a class="barLink" href="about-us.html">About Us</a>
+            <a class="barLink" href="our-menu.html">Our Menu</a>
+            <a class="barLink" href="catering.html">Catering</a>
+            <a class="barLink active" href="contact.html">Contact Us</a>
+        </div>
+    </div>
+    <!--       Middle content begins    -->
+    <div class="middleContent">
+        <div class="mainImage" id="contactIMG">
+            <h1 class="bigTitle">Contact Us</h1>
+            <div class="decorBorder"></div>
+            <div class="subTitle">We'd love to hear from you!</div>
+        </div>
+    </div>
+    <!--       End content begins       -->
+    <div class="content">
+        <div class="rightContent">
+            <form>
+                <h2>Comments or Questions?</h2>
+                <p class="form">Your Name (required)</p><input id="name" name="yourName" type="text"><br>
+                <p class="form">Your Email (required)</p><input id="email" name="yourEmail" type="email"><br>
+                <p class="form">Phone Number</p><input id="phone" name="yourPhone" type="tel"><br>
+                <p class="form">Your Comments</p><textarea cols='30' rows="5" id="comment" name="yourComments" type="text"></textarea><br>
+                <input type="submit" value="SEND" class="SUBMIT">
+            </form>
+        </div>
+    </div>
+    <!--         Footer      -->
+    <div class="footer">
+        <div class="footAddress">
+            <h2>Location</h2>
+            <p>1523 N Canyon Road</p>
+            <p>Provo, UT 84604</p>
+            <p>(208) 697-1188</p>
+        </div>
+        <div class="hours">
+            <h2>Hours</h2>
+            <p>11:00 am - 9:00 pm</p>
+            <p>Closed Sunday</p>
+        </div>
+    </div>
+    <p class="copyright">&copy Austin Ballard 2018</p>
+</div>
 </body>
 </html>

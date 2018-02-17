@@ -137,19 +137,14 @@ a {
 .navBar {
   background: rgba(0, 0, 0, 0.7);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding-right: 20px;
   position: fixed;
   width: 100%;
+  height: 100px;
   font-size: 18px;
   top: 0;
-}
-.navBar .headerImage {
-  height: 100px;
-  width: 100px;
-  background-image: url(../logo.png);
-  background-size: cover;
 }
 .navBar .navButtons {
   margin-right: 4%;
@@ -165,10 +160,6 @@ a {
 }
 .navBar .navButtons .barLink:hover {
   color: #4286f4;
-}
-.navBar .navButtons .barLink:active {
-  background-color: white;
-  color: gray;
 }
 .navBar .navButtons .active {
   background-color: white;
@@ -226,6 +217,7 @@ textarea {
   font-family: 'Oswald', sans-serif;
   color: gray;
   margin-bottom: 20px;
+  border: 1px solid #dadfea;
 }
 .SUBMIT {
   background: black;
